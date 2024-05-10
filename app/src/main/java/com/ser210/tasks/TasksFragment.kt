@@ -26,6 +26,7 @@ class TasksFragment : Fragment() {
         val viewModelFactory = TasksViewModelFactory(dao)
         val viewModel = ViewModelProvider(this, viewModelFactory).get(TasksViewModel::class.java)
         binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         return view
     }
